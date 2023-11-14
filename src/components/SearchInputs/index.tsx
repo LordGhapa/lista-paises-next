@@ -73,10 +73,10 @@ export default function SearchInputs({
   };
 
   return (
-    <div className="mt-5 flex items-center gap-5 rounded-md bg-gray-400 p-4 shadow-lg ">
+    <div className="mt-5 flex flex-col items-center gap-5 rounded-md bg-gray-400 p-4 shadow-lg">
       <span className="font-bold dark:text-black">Filtrar por:</span>
       <form
-        className="flex items-center gap-5"
+        className="flex  items-center gap-2 flex-col lg:flex-row lg:gap-5"
         onSubmit={(e) => {
           {
             e.preventDefault();
