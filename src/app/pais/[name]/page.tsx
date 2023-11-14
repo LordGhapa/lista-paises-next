@@ -1,3 +1,4 @@
+import { getCountries } from "@/app/utils/getCountries";
 import { getCountryBordersByName } from "@/app/utils/getCountryBordersByName";
 import { getCountryByName } from "@/app/utils/getCountryByName";
 import CountryCard from "@/components/CountryCard";
@@ -6,11 +7,11 @@ import Link from "next/link";
 import React from "react";
 
 // se quiser que SSG basta tirar o comentário
-// export async function generateStaticParams(){
-//   const countries= await getCountries();
-//   const countriesNames = countries.map((country)=>({name:country.name.common}))
-//   return countriesNames
-// }
+export async function generateStaticParams(){
+  const countries= await getCountries();
+  const countriesNames = countries.map((country)=>({name:country.name.common}))
+  return countriesNames
+}
 
 export default async function CountryPage({
   params: { name },

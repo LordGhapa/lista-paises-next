@@ -73,8 +73,8 @@ export default function SearchInputs({
   };
 
   return (
-    <div className="mt-5 flex items-center gap-5 rounded-md bg-gray-400 p-4 shadow-lg">
-      <span className="font-bold" >Filtrar por:</span>
+    <div className="mt-5 flex items-center gap-5 rounded-md bg-gray-400 p-4 shadow-lg ">
+      <span className="font-bold dark:text-black">Filtrar por:</span>
       <form
         className="flex items-center gap-5"
         onSubmit={(e) => {
@@ -84,7 +84,7 @@ export default function SearchInputs({
           }
         }}
       >
-        <label className="font-bold" htmlFor="name">
+        <label className="font-bold dark:text-black" htmlFor="name">
           Nome:
         </label>
         <input
@@ -92,13 +92,13 @@ export default function SearchInputs({
           type="search"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="bg-gray-100 p-2 text-black"
+          className="bg-gray-100 p-2 text-black dark:bg-gray-800 dark:text-white "
         />
-        <label htmlFor="language" className="font-bold">
+        <label htmlFor="language" className="font-bold dark:text-black">
           Idioma:
         </label>
         <input
-          className="p-2"
+          className="p-2 dark:bg-gray-800 dark:text-white "
           list="languages"
           id="language"
           value={searchByLanguage}
@@ -108,12 +108,12 @@ export default function SearchInputs({
           <OptionsLanguage />
         </datalist>
 
-        <label className="font-bold" htmlFor="continent">
+        <label className="font-bold dark:text-black" htmlFor="continent">
           Continente:
         </label>
         <select
           id="continent"
-          className="p-2"
+          className="p-2 dark:bg-gray-800 dark:text-white"
           value={searchByContinent}
           onChange={(e) => setSearchByContinent(e.target.value)}
         >
@@ -121,12 +121,12 @@ export default function SearchInputs({
           <OptionsContinent />
         </select>
         <input
-          className="rounded-md bg-slate-200 p-2"
+          className="rounded-md bg-slate-200 p-2 dark:text-black"
           type="submit"
           value="Filtrar"
         />
         <input
-          className="rounded-md bg-slate-200 p-2"
+          className="rounded-md bg-slate-200 p-2 dark:text-black"
           type="reset"
           value="Limpar"
           onClick={resetSearch}

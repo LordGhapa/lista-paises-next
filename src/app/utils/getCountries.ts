@@ -1,4 +1,5 @@
 import { Country } from "@/types";
+
 async function fetchWithTimeout(resource:any, options:any = {}) {
   const { timeout = 10000 } = options;
 
