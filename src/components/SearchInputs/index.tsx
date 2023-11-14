@@ -88,11 +88,12 @@ export default function SearchInputs({
           Nome:
         </label>
         <input
+          autoComplete="off"
           id="name"
           type="search"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="bg-gray-100 p-2 text-black dark:bg-gray-800 dark:text-white "
+          className=" bg-gray-100 p-2 text-black  hover:open:bg-red-500 dark:bg-gray-800  dark:text-white "
         />
         <label htmlFor="language" className="font-bold dark:text-black">
           Idioma:
