@@ -27,29 +27,29 @@ export default async function CountryPage({
 
   return (
     <section className="container flex flex-col">
-      <h1 className="my-16 text-center text-5xl font-bold text-gray-800">
+      <h1 className="my-16 text-center text-5xl font-bold text-gray-800 dark:text-white">
         {country?.translations?.por?.common}
       </h1>
       <Link href="/" className="flex w-fit items-center py-2 ">
         <span className="text-xl"> ⬅ </span> Voltar
       </Link>
-      <article className="flex min-w-full flex-col justify-between rounded-xl bg-white p-10 lg:flex-row ">
+      <article className="flex min-w-full flex-col justify-between rounded-xl bg-white p-10 dark:bg-slate-700 dark:text-white lg:flex-row ">
         <section className="flex max-h-44 min-h-full flex-col justify-between">
           {country?.capital && (
-            <h2 className="text-xl  text-gray-800">
+            <h2 className="text-xl  text-gray-800  dark:text-white">
               <b>🏙️ Capital: </b>
               {country?.capital}
             </h2>
           )}
-          <h2 className="text-xl  text-gray-800">
+          <h2 className="text-xl  text-gray-800  dark:text-white">
             <b> 🗺️ Continente: </b> {country?.region}{" "}
             {country?.subregion && ` - ${country?.subregion}`}
           </h2>
-          <h2 className="text-xl  text-gray-800">
+          <h2 className="text-xl  text-gray-800  dark:text-white">
             <b>👨‍👩‍👧‍👦 População:</b> {formatter.format(country?.population)}
           </h2>
           {country?.languages && (
-            <h2 className="flex max-w-lg flex-wrap items-center text-xl text-gray-800 ">
+            <h2 className="flex max-w-lg flex-wrap items-center text-xl text-gray-800  dark:text-white ">
               <b> 🗣️ Línguas faladas:</b>
               <div className="flex flex-wrap gap-1">
                 {Object?.values(country?.languages)?.map((language) => (
@@ -79,7 +79,7 @@ export default async function CountryPage({
       <section>
         <h3
           className="mt-12
-     text-2xl font-semibold text-gray-800 "
+     text-2xl font-semibold text-gray-800  dark:text-white "
         >
           Países que fazem fronteira
         </h3>
